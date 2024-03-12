@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Marshmellow's Screen</title>
+        <link rel="stylesheet"  href="./marsh.css" />
+
+        <style>
+            #inner_table td {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul {
+                margin-right: 40px;
+            }
+
+
+            li {
+                list-style-type: none;
+               
+                width: 100%;           
+            }
+
+            .song-artist {
+                border: 1px solid black;      
+            }
+
+            .x {
+                display: flex;      
+                align-items: stretch;
+                border: 1px solid black;   
+            }     
+            
+            .song-list {
+                height: 200px; /* Set the height to accommodate 5 songs */
+                overflow-y: scroll; /* Add vertical scrollbar */         
+            }
+           
+        </style>
+        <script src="./song.json"></script> 
+    </head>
+
+    
+    <body>
+        <main>
+            <div class="content"></div>
+           
+            <div class="outer_table_container">
+                <!--Outer table-->
+                <table id="outer_table">
+                    <tr id="outer_table_tr1">
+                        <th id="outer_table_th">
+                            <nav class="menu">
+                                <div id="logo">
+                                    <!--GO BACK TO SCREEN 1-->
+                                    <a href="screen1.html"><img src="https://shorturl.at/osUWX" width="50%"></a>                              
+                                </div>
+
+                                <div>
+                                    <a href="#"><img src="https://shorturl.at/loEW7" width="50%"></a>                         
+                                </div>
+                            </nav>
+                        </th>
+                    </tr>
+
+                    <tr id="outer_table_tr2">
+                        <td id="outer_table_td">
+                            <div class="content2">
+                                <header>
+                                    <h2 id="header">Producer</h2>
+                                </header>
+                            </div>
+                            
+                            <div class="inner_table_container">
+                                <!--Inner table-->
+                                <table id="inner_table">
+                                    <tr id="inner_table_tr1">
+                                        <td>
+                                            <div class="div1">
+                                             
+                                                <form id="search_form">                                                
+                                                    <input type="text" id="search_bar" placeholder="Search...">
+                                                    <button type="submit">search</button>
+                                                </form>
+
+                                            </div>
+
+                                            <div id="search_results"></div>
+
+
+                                            <div class="div2">         
+                                                <ul>
+                                                    <li>
+                                                        <div class="song-artist"><h3>Song - Artist</h3></div>
+
+                                                        <!--SONG LIST-->
+                                                        <div class="song-list">
+                                                            <div class ="x">
+                                                                <div style="padding-right: 500px;">Fly</div> 
+                                                                <audio src="music/Marshmello - FLY (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 490px;">Stars</div> 
+                                                                <audio src="music/Marshmello - Stars (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 470px;">Summer</div> 
+                                                                <audio src="music/Marshmello - Summer (Official Music Video) with Lele Pons.mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 430px;">Here With Me</div> 
+                                                                <audio src="music/Marshmello - Here With Me Feat. CHVRCHES [Alternative Music Video].mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right:440px;">Take It Back</div> 
+                                                                <audio src="music/Marshmello - Take It Back (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 470px;">Silence</div> 
+                                                                <audio src="music/Marshmello ft. Khalid - Silence (Official Lyric Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 410px;">One Thing Right</div> 
+                                                                <audio src="music/Marshmello, Kane Brown - One Thing Right (Audio).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 470px;">Friends</div> 
+                                                                <audio src="music/Marshmello & Anne-Marie - FRIENDS (Lyric Video) OFFICIAL FRIENDZONE ANTHEM.mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 470px;">Happier</div> 
+                                                                <audio src="music/Marshmello ft. Bastille - Happier (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 470px;">Wolves</div> 
+                                                                <audio src="music/Selena Gomez, Marshmello - Wolves (Lyrics).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>         
+
+                                                        </div>                                                     
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </td>                            
+                                    </tr>                                
+                                </table>
+
+
+                            </div>
+                           
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <!--TO LINK JAVASCRIPT FILE-->
+        <script  src="./marsh.js"></script>
+    </body>
+
+</html>

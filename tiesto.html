@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tiesto's Screen</title>
+        <link rel="stylesheet"  href="./tiesto.css" />
+
+        <style>
+            #inner_table td {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            ul {
+                margin-right: 40px;
+            }
+
+
+            li {
+                list-style-type: none;
+               
+                width: 100%;           
+            }
+
+            .song-artist {
+                border: 1px solid black;      
+            }
+
+            .x {
+                display: flex;      
+                align-items: stretch;
+                border: 1px solid black;   
+            }     
+            
+            .song-list {
+                height: 200px; /* Set the height to accommodate 5 songs */
+                overflow-y: scroll; /* Add vertical scrollbar */         
+            }
+           
+        </style>
+        <script src="./song.json"></script> 
+    </head>
+
+    
+    <body>
+        <main>
+            <div class="content"></div>
+           
+            <div class="outer_table_container">
+                <!--Outer table-->
+                <table id="outer_table">
+                    <tr id="outer_table_tr1">
+                        <th id="outer_table_th">
+                            <nav class="menu">
+                                <div id="logo">
+                                    <!--GO BACK TO SCREEN 1-->
+                                    <a href="screen1.html"><img src="https://shorturl.at/osUWX" width="50%"></a>                              
+                                </div>
+
+                                <div>
+                                    <a href="#"><img src="https://shorturl.at/loEW7" width="50%"></a>                         
+                                </div>
+                            </nav>
+                        </th>
+                    </tr>
+
+                    <tr id="outer_table_tr2">
+                        <td id="outer_table_td">
+                            <div class="content2">
+                                <header>
+                                    <h2 id="header">Producer</h2>
+                                </header>
+                            </div>
+                            
+                            <div class="inner_table_container">
+                                <!--Inner table-->
+                                <table id="inner_table">
+                                    <tr id="inner_table_tr1">
+                                        <td>
+                                            <div class="div1">
+                                               
+                                                <form id="search_form">                                                
+                                                    <input type="text" id="search_bar" placeholder="Search...">
+                                                    <button type="submit">search</button>
+                                                </form>
+
+                                            </div>
+
+                                            <div id="search_results"></div>
+
+
+                                            <div class="div2">         
+                                                <ul>
+                                                    <li>
+                                                        <div class="song-artist"><h3>Song - Artist</h3></div>
+
+                                                        <!--SONG LIST-->
+                                                        <div class="song-list">
+                                                            <div class ="x">
+                                                                <div style="padding-right: 395px;">All Nighter</div> 
+                                                                <audio src="music/Tiësto - All Nighter [Official Visualizer].mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 400px;">The Motto</div> 
+                                                                <audio src="music/Tiësto & Ava Max - The Motto (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 430px;">10_35</div> 
+                                                                <audio src="music/Tiësto - 10_35 (feat. Tate McRae) (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 380px;">The Business</div> 
+                                                                <audio src="music/Tiësto - The Business (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 430px;">Chills</div> 
+                                                                <audio src="music/Tiësto - Chills (LA Hills) (feat. A Boogie Wit da Hoodie) [Official Audio].mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 410px;">Hot In It</div> 
+                                                                <audio src="music/Tiësto & Charli XCX - Hot In It [Official Music Video].mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 360px;">Pump It Louder</div> 
+                                                                <audio src="music/Tiësto & Black Eyed Peas - Pump It Louder (Official Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 380px;">Learn 2 Love</div> 
+                                                                <audio src="music/Tiësto - Learn 2 Love [Official Audio].mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 370px;">Bet My Dollar</div> 
+                                                                <audio src="music/Bet My Dollar (feat. Freya Ridings) [Official Audio].mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>
+                                                        
+                                                            <div class="x">
+                                                                <div style="padding-right: 400px;">Lay Low</div> 
+                                                                <audio src="music/Tiësto - Lay Low (Official Music Video).mp3" controls></audio>
+                                                                <div>
+                                                                    <button onclick="deleteSong(this)">delete</button>
+                                                                </div>
+                                                            </div>         
+
+                                                        </div>                                                     
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            
+                                        </td>                            
+                                    </tr>                                
+                                </table>
+
+
+                            </div>
+                           
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </main>
+        <!--TO LINK JAVASCRIPT FILE-->
+        <script  src="./tiesto.js"></script>
+    </body>
+
+</html>
